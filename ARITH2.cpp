@@ -1,27 +1,41 @@
 #include<iostream>
-#include<sstream>
 using namespace std;
 
 int main()
 {
-	long long int n;
-	cin>>n;
-	cout<<n<<"\n";
-	string data;
-	getline(cin,data);
-	getline(cin,data);
+	long long int T;
+	cin>>T;
 
-	while(n--)
+	while(T--)
 	{
-		getline(cin,data);
-		cout<<data<<"\n";
-		cout<<"+"<<data.find("+")<<"\n";
-		cout<<"-"<<data.find("-")<<"\n";
-		cout<<"*"<<data.find("*")<<"\n";
-		cout<<"/"<<data.find("/")<<"\n";
-		cout<<"\n";
-		getline(cin,data);
+		long long oper1,res=0;
+		char sign='\0';
+		cin>>res;
+
+		while(sign != '=')
+		{
+			cin>>sign;	//Will hold the operand
+			switch(sign)
+			{
+				case '+':	cin>>oper1;
+						res+=oper1;
+						break;
+				case '-':	cin>>oper1;
+						res-=oper1;
+						break;
+				case '*': 	cin>>oper1;
+						res*=oper1;
+						break;
+				case '/':	cin>>oper1;
+						res/=oper1;
+						break;
+				case '=':	cout<<res<<"\n";
+			}
+		
+		}
 	}
 
 	return 0;
 }
+
+							

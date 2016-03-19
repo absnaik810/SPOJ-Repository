@@ -12,7 +12,7 @@ void addEdge(long int u, long int v)
 	adj[v].push_back(u);
 }
 
-bool isBipartiite(long int num)			//1 is one color and the other is 0; -1 is default -> No color
+bool isBipartiite(long int num)			
 {
 	long int i,top;
 	for(i=0;i<b;i++)
@@ -20,7 +20,7 @@ bool isBipartiite(long int num)			//1 is one color and the other is 0; -1 is def
 	std::list<long int>::iterator it;
 
 	queue<long int>q;
-	color[num]=1;				//color the source node with 1
+	color[num]=1;				
 	q.push(num);
 
 	while(!q.empty())
@@ -36,7 +36,7 @@ bool isBipartiite(long int num)			//1 is one color and the other is 0; -1 is def
 		{
 			if(color[*it]==-1)
 			{
-				color[*it]=1-color[top];	//magic function -> if color[top] is 0, color[current] is 1 and vice versa
+				color[*it]=1-color[top];	
 				q.push(*it);
 			}
 			else

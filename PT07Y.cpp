@@ -5,12 +5,12 @@ using namespace std;
 
 class Graph
 {
-	int V;							//Number of vertices in the graph
-	list<int> *adj;						//Pointer to an array of adjancency lists (to store the neighbors)
+	int V;							
+	list<int> *adj;						
 	public:
-		Graph(int V);					//Constructor
-		void addEdge(int u, int v);			//Adding an edge u-v to u
-		void dfs(int start);				//Declaration of the dfs function
+		Graph(int V);					
+		void addEdge(int u, int v);			
+		void dfs(int start);				
 };
 
 Graph::Graph(int V)

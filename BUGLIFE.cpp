@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<cstdio>
 #include<list>
 #include<queue>
 using namespace std;

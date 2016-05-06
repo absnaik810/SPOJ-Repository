@@ -86,7 +86,6 @@ void Graph::bfs(int start, int end)
 	{
 		counter++;
 		i=prev[i];
-		printf("%d\n",i);
 	}
 	
 	printf("%d\n",counter);
